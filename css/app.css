@@ -1,0 +1,415 @@
+/* ESTILOS GENERALES */
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Montserrat;
+}
+.container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;;
+}
+
+.header{
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+/******************* ESTILOS DEL HEADER *************/
+.format-link{
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.header-opt{
+    display: flex;
+    border-bottom: 1px solid rgb(236, 236, 236);
+}
+.opt-link{
+    color: #9b9b9b;
+    line-height: 3rem;
+    text-decoration: none;
+    font-size: .8rem;
+}
+.opt-link:nth-child(2){
+    margin-right: auto;
+    margin-left: 3rem;
+}
+.opt-link:nth-child(3){
+    margin-left: auto;
+    margin-right: 5rem;
+}
+.link-span{
+    color: black;
+    text-decoration: none;
+}
+
+
+/* ESTILOS DEL MENU DE NAVEGACION */
+
+.navigator{
+    padding: 2rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-list{
+    list-style: none;
+}
+.navigator-nav{
+    flex: 0 1 70%;
+}
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+}
+.item-link{
+    font-weight: 700;
+    color: black;
+    letter-spacing: .1rem;
+    font-size: .9rem;
+    display: block;
+}
+.list-item{
+    position: relative;
+}
+.list-item:hover::after{
+    content: " ";
+    width:100%;
+    height: 2px;
+    position: absolute;
+    bottom: -10px;
+    background-color: orange;
+}
+/* ESTILOS DEL SUB MENU */
+.sub-list{
+    list-style: none;
+    display: none;
+    position: absolute;
+    bottom: -30px;
+    height: 30px;
+    z-index: 1;
+}
+.sub-link{
+    white-space: nowrap;
+    display: block;
+    text-decoration: none;
+    font-size: .9rem;
+    color: #fff; 
+    font-weight: 700;
+}
+.sub-item{
+    position: relative;
+    bottom: -30px;
+    background-color: orange;
+    line-height: 2rem;
+    padding: 0 2rem;   
+}
+.list-item:hover .sub-list{
+    display: block;
+}
+
+
+/* *************ESTILOS DE LA SECCION BUSCAR**************** */
+
+.welcome{
+    background-image: url(../images/bg_header.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    position: relative;
+    display: flex;
+}
+.welcome::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: hsla(121, 21%, 7%, .6);
+}
+.container__welcome{
+    margin: auto;
+    position: relative;
+    width: 65%;
+    height: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+}
+.welcome__title{
+    font-size: 3rem;
+    color: #fff;
+}
+.welcome__form{
+    flex: 0 0 60%;
+    /* border: 2px solid green; */
+}
+.form__search{
+    display: flex;
+    margin-top: 1rem;
+}
+.form__inp{
+    flex: 0 0 75%;
+    border: 0;
+    height: 3rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 0 1rem;
+}
+.form__link{
+    text-transform: uppercase;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: .8rem;
+    display: inline-block;
+    line-height: 1.5rem;
+    font-weight: 700;
+    padding: 0 1rem;
+}
+.form__link:nth-child(1){
+    padding-left: 0;
+}
+.form__link:nth-child(2){
+    border-right: 1px solid #9b9b9b;
+    border-left: 1px solid #9b9b9b;
+}
+.form__btn{
+    flex: 0 0 25%;
+    border: 0;
+    background-color: orange;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+/****************** ESTILOS SECCION TYPES APARTAMENT **************/
+.type{
+    margin: 2rem 0;
+}
+.type__cnt{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+.container__type{
+    flex: 0 0 23%;
+    height: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 0 1rem;
+    border-radius: 5px;
+    color: #f2f2f2;
+    position: relative;
+    overflow: hidden;
+}
+
+.container__type:nth-child(1){
+    background: url(../images/interior1.jpeg) center / cover;
+}
+.container__type:nth-child(2){
+    background: url(../images/interior2.jpeg) center / cover;
+}
+.container__type:nth-child(3){
+    background: url(../images/interior3.jpeg) center / cover;
+}
+.container__type:nth-child(4){
+    background: url(../images/interior4.jpeg) center / cover;
+}
+.container__type > *{
+    margin: auto;
+}
+
+.type__text,
+.type__title{
+    z-index: 1;
+}
+.type__title{
+    text-align: center;
+    flex: 1 100%;
+}
+.type__link{
+    background-color: orange;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: .9rem;
+    position: absolute;
+    bottom: -100px;
+    line-height: 3rem;
+    padding: 0 2rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: all .3s;
+}
+.container__type:hover .type__link{
+    transform: translateY(-120px);
+}
+.container__type:hover::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.6);
+    position: absolute;
+}
+
+
+/* *********ESTILOS SECCIN PROPERTIES RECENT ********/
+.ctn__recent{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px 1fr 1fr 50px;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.recent__title{
+    display: flex;
+    margin: auto;
+    grid-column: 1 / span 3;
+    grid-row: 1 / 2;
+    font-size: 2.5rem;
+    color: rgb(49, 49, 49);
+}
+.recent__property--ava{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.recent__property--asthon{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+.recent__property--presidio{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+.recent__property--bay{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+.recent__property--avalon{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+.recent__property--village{
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+.recent__property{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+.property__image{
+    width: 100%;
+    flex: 1 0 45%;
+}
+.property__description{
+    flex: 1 0 55%;
+}
+.description__title{
+        color: orange;
+        line-height: 4rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+}
+.description__price{
+    color: rgb(49, 49, 49);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.description__list{
+    list-style: none;
+    color: #9b9b9b;
+    margin-bottom: 2rem;
+}
+.description__list *{
+    display: inline-block;
+    margin-right: 3rem;
+}
+.description__list *:nth-child(3){
+    margin-right: 0;
+}
+.descripcion__content{
+    color: #474747;
+    line-height: 1.7rem;
+}
+.recent__btn{
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    background-color: orange;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: .9rem;
+    line-height: 3rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+/* *********ESTILOS SECCION SETTINGS******* */
+.settings{
+    background: url(../images/view_top.jpg) center / cover ;
+    position: relative;
+}
+.settings::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.8);
+    position: absolute;
+}
+.ctn__settings{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    height: 500px;
+}
+.settings__opt{
+    flex:0 0 30%;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.setting__title{
+    flex:1 0 100%;
+    display: flex;
+    font-size: 2.5rem;
+    color: #f2f2f2;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.opt__title{
+    margin: 1rem 0;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+.opt__text{
+    color: #f2f2f2;
+    text-align: center;
+}
+.opt__icon{
+    width: 20%;
+}
